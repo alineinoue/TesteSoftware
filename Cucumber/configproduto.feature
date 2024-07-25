@@ -8,22 +8,12 @@
             Contexto:
             Dado que estou na página do produto
 
-            Cenário: Adicionar produto ao carrinho sem cor
-            Quando eu adicionar um produto ao carrinho sem selecionar a cor
-            Então deve exibir uma mensagem de erro: "Por favor, selecione uma cor"
-
-            Cenário: Adicionar produto ao carrinho sem tamanho
-            Quando eu adicionar um produto ao carrinho sem selecionar o tamanho
-            Então deve exibir uma mensagem de erro "Por favor, selecione um tamanho"
-
-            Cenário: Adicionar produto ao carrinho sem quantidade
-            Quando eu adicionar um produto ao carrinho sem selecionar a quantidade
-            Então deve exibir uma mensagem de erro "Por favor, selecione uma quantidade"
+            Cenário: Adicionar produto ao carrinho sem cor, tamanho ou quantidade
+            Quando eu adicionar um produto ao carrinho sem selecionar a cor, tamanho ou quantidade
+            Então deve exibir uma mensagem de erro
 
             Esquema do Cenário: Limite de vendas de produto
-            Quando eu selecionar a cor
-            E selecionar o tamanho
-            E selecionar a <quantidade>
+            Quando eu selecionar a cor, tamanho e <quantidade>
             Então deve exibir a <mensagem>
 
             Exemplos:
@@ -35,12 +25,9 @@
             | 12         | "O limite máximo de quantidade por item é 10."         |
 
             Cenário: Validar botão de Limpar
-            Quando selecionar uma cor
-            E selecionar o tamanho
-            E selecionar a quantidade
+            Quando selecionar uma cor, tamanho e quantidade 
             E clicar no botão de "Limpar"
-            Então o campo de cor, tamanho e quantidade deverão ser redefinidos
-            E devem voltar ao estado original
+            Então o campo de cor, tamanho e quantidade deverão ser redefinidos e voltar ao estado original
 
 
 

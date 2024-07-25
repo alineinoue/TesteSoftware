@@ -18,14 +18,12 @@
 
             Cenário: Usuário com senha inválida
             Dado acessar a plataforma para realizar o login
-            Quando eu digitar o usuário "usuario1@ebac.com.br"
-            E a senha "Teste"
+            Quando eu digitar o usuário "usuario1@ebac.com.br" e a senha "Teste"
             Então deve exibir uma mensagem de alerta: "Usuário ou senha inválidos"
 
             Esquema do Cenário: Autenticar múltiplos usuários
             Dado acessar a plataforma para realizar o login
-            Quando inserir o <email>
-            E inserir a <senha>
+            Quando inserir o <email> e <senha>
             Então deve exibir a <mensagem>
 
             Exemplos:
